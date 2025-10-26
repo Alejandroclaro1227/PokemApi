@@ -1,0 +1,138 @@
+/**
+ * Estilos para componente FilterDropdown
+ */
+
+.filterDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.triggerButton {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  min-width: 180px;
+}
+
+.dropdownContent {
+  position: absolute;
+  top: calc(100% + var(--spacing-sm));
+  left: 0;
+  z-index: var(--z-index-dropdown);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-md);
+  min-width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.dropdownTitle {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.clearAllButton {
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: var(--font-weight-medium);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.clearAllButton:hover {
+  background-color: rgba(238, 21, 21, 0.1);
+}
+
+.typeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.typeButton {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  background-color: var(--color-bg-card);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.typeButton:hover {
+  border-color: var(--type-color);
+  background-color: rgba(var(--type-color-rgb), 0.1);
+  transform: translateY(-2px);
+}
+
+.typeButton.selected {
+  border-color: var(--type-color);
+  background-color: var(--type-color);
+  color: white;
+}
+
+.typeButton:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.checkmark {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+}
+
+.typeName {
+  text-transform: capitalize;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .dropdownContent {
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: calc(100vw - var(--spacing-xl));
+    max-width: 400px;
+  }
+
+  .typeGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+

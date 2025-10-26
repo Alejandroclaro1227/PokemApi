@@ -1,0 +1,48 @@
+/**
+ * Estilos para componente Badge
+ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--border-radius-lg);
+  text-transform: capitalize;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+/* Variantes */
+.solid {
+  background-color: var(--badge-color, var(--color-text-secondary));
+  color: white;
+  border: none;
+}
+
+.outline {
+  background-color: transparent;
+  color: var(--badge-color, var(--color-text-secondary));
+  border: 2px solid var(--badge-color, var(--color-text-secondary));
+}
+
+/* Tamaños */
+.sm {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-xs);
+  height: 20px;
+}
+
+.md {
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  height: 24px;
+}
+
+.lg {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: var(--font-size-base);
+  height: 32px;
+}
+
+

@@ -1,0 +1,73 @@
+/**
+ * Estilos para componente SearchBar
+ */
+
+.searchBar {
+  width: 100%;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.searchIcon {
+  position: absolute;
+  left: var(--spacing-md);
+  font-size: var(--font-size-lg);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.searchInput {
+  padding-left: calc(var(--spacing-xl) + var(--spacing-md)) !important;
+  padding-right: calc(var(--spacing-xl) + var(--spacing-md)) !important;
+}
+
+.clearButton {
+  position: absolute;
+  right: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: var(--color-text-light);
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-fast);
+  z-index: 1;
+}
+
+.clearButton:hover {
+  background-color: var(--color-text-secondary);
+  transform: scale(1.1);
+}
+
+.clearButton:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .searchIcon {
+    left: var(--spacing-sm);
+  }
+
+  .clearButton {
+    right: var(--spacing-sm);
+  }
+
+  .searchInput {
+    padding-left: calc(var(--spacing-lg) + var(--spacing-md)) !important;
+    padding-right: calc(var(--spacing-lg) + var(--spacing-md)) !important;
+  }
+}
+
+
