@@ -106,7 +106,7 @@ export const getTypeColor = (type: string): string => {
 /**
  * Debounce para optimizar búsquedas
  */
-export const debounce = <T extends (...args: unknown[]) => unknown>(
+export const debounce = <T extends (...args: any[]) => any>(
   func: T,
   delay: number
 ): ((...args: Parameters<T>) => void) => {
