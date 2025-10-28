@@ -27,11 +27,11 @@ jobs:
           node-version: "20"
 
       - name: Install dependencies
-        working-directory: ./DesarrolloFrontPokemon/pokemon-app
+        working-directory: DesarrolloFrontPokemon/pokemon-app
         run: npm ci
 
       - name: Build
-        working-directory: ./DesarrolloFrontPokemon/pokemon-app
+        working-directory: DesarrolloFrontPokemon/pokemon-app
         run: npm run build
 
       - name: Setup Pages
