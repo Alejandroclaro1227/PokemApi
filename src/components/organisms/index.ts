@@ -11,3 +11,5 @@ export { PokemonDetail } from './PokemonDetail/PokemonDetail';
 export type { PokemonDetailProps } from './PokemonDetail/PokemonDetail';
 
 
+
+

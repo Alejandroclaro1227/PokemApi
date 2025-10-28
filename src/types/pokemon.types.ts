@@ -143,3 +143,5 @@ export const POKEMON_TYPES: PokemonTypeFilter[] = [
 ];
 
 
+
+
